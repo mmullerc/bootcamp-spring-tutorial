@@ -1,6 +1,12 @@
 package contracts;
 import java.util.List;
 
+/**
+ * 
+ * @author Mathias
+ *
+ */
+
 public class BasePagingRequest{
 	
 	private Integer pageNumber;

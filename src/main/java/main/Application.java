@@ -10,10 +10,17 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+
+/**
+ * @author Mathias
+ * 
+ * Main Application entry point
+ */
+
 //Annotations
 
 @SpringBootApplication //Provides SpringBoot configuration
-@ComponentScan(basePackages = "controllers,contracts,services,pojos") //This annotation scans the given packages for BEANS adds them to the context application path
+@ComponentScan(basePackages = "controllers,contracts,services,pojos,logger") //This annotation scans the given packages for BEANS adds them to the context application path
 @EnableJpaRepositories("repositories") //Enables Java Persistence API repositories
 @EntityScan(basePackages = "ejb")// SCANS for Enterprise Java beans and adds them to the context application path
 

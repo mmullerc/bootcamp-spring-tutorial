@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Implementation-Title: gs-rest-service
+Implementation-Title: bootcamp-spring-rest
 Implementation-Version: 0.1.0
 Built-By: Mathias
 Implementation-Vendor-Id: org.springframework

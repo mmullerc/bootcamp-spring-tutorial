@@ -1,5 +1,10 @@
 package contracts;
 
+/**
+ * 
+ * @author Mathias
+ *
+ */
 public class BaseResponse {
 	
 	private Integer code;

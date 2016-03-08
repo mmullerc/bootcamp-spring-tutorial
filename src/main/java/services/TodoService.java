@@ -12,6 +12,8 @@ import ejb.Todo;
  * Todo Service, implements the TodoServiceInterface
  *
  *It's main function is to provide communication between the RestControllers and the repositories.
+ *
+ * @author Mathias
  */
 @Service
 public class TodoService implements TodoServiceInterface{

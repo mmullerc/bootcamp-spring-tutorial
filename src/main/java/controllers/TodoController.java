@@ -20,6 +20,8 @@ import services.TodoServiceInterface;
 /**
  * This Rest Controller maps all the Todo end points with specific functions
  * to provide functionality to the /todos RESTful API
+ * 
+ * @author Mathias
  *
  */
 @RestController //Indicates Spring that this is a Web Controller, adds the @Controller and @ResponseBody annotations
@@ -31,12 +33,11 @@ public class TodoController {
 	/**
 	 * Gets all Todo's
 	 * @return TodoResponse
+	 * @throws Exception 
 	 */
 	@CrossOrigin(origins = "*") //Can receive a request from any origin
 	@RequestMapping(value = "/getTodos", method = RequestMethod.GET) //Maps the /getTodos route with the getAll() function
-	public TodoResponse getAll() {
-
-		System.out.println("GETTING ALL TODOS");
+	public TodoResponse getAll(){
 
 		TodoResponse todoResp = new TodoResponse();
 
@@ -51,7 +52,7 @@ public class TodoController {
 			todo.setIsDone(t.getIsDone());
 			todos.add(todo);
 		});
-
+		
 		todoResp.setTodos(todos);
 
 		todoResp.setCode(200);
@@ -67,8 +68,6 @@ public class TodoController {
 	@CrossOrigin(origins = "*") //Can receive a request from any origin
 	@RequestMapping(value = "/createTodo", method = RequestMethod.POST) //Maps the /createTodo route with the createTodo() function
 	public TodoResponse createTodo(@RequestBody TodoRequest todoRequest) {
-
-		System.out.println("CREATING A NEW TODO");
 
 		Todo todo = new Todo();
 		todo.setTask(todoRequest.getTask());
@@ -104,8 +103,6 @@ public class TodoController {
 	@CrossOrigin(origins = "*") //Can receive a request from any origin
 	@RequestMapping(value = "/updateTodo", method = RequestMethod.PUT) //Maps the /updateTodo route with the updateTodo() function
 	public TodoResponse updateTodo(@RequestBody TodoRequest todoRequest) {
-
-		System.out.println("UPDATING A TODO");
 
 		Todo todo = new Todo();
 		todo.setIdtodo(todoRequest.getId());
@@ -143,8 +140,6 @@ public class TodoController {
 	@CrossOrigin(origins = "*") //Can receive a request from any origin
 	@RequestMapping(value = "/deleteTodo", method = RequestMethod.DELETE)//Maps the /deleteTodo route with the deleteTodo() function
 	public TodoResponse deleteTodo(@RequestParam("id") int todoId) {
-
-		System.out.println("DELETING A TODO");
 
 		Boolean deleted = todoService.deleteTodo(todoId);
 

@@ -4,7 +4,9 @@ package contracts;
 /**
  * Todo Request
  *
- *Its the Request that the API recieves when dealing with Todos
+ * Its the Request that the API recieves when dealing with Todos
+ *
+ * @author Mathias
  */
 public class TodoRequest extends BasePagingRequest {
 

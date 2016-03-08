@@ -9,6 +9,8 @@ import ejb.Todo;
  * Todo Service Interface
  * 
  * Provides the CRUD services to the Todo RestController
+ * 
+ * @author Mathias
  */
 @Service
 public interface TodoServiceInterface {

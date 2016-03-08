@@ -8,6 +8,8 @@ import pojos.TodoPOJO;
  * Todo Response
  * 
  * Its the Todo response that API returns
+ * 
+ * @author Mathias
  *
  */
 public class TodoResponse extends BaseResponse {
